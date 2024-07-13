@@ -1,0 +1,222 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-image: url("pexels-christian-heitz-285904-842711.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    /* background: #0082e6; */
+    backdrop-filter: blur(100px);
+    height: 80px;
+    width: 100%;
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+    background: #1b9bff;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+}
+
+section {
+    background: url(bg1.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+}
+section marquee{
+    margin-top: 25px;
+    font-size: 23px;
+    background-color: #1b9bff;
+    color: #ffffffff;
+    font-weight: bold;
+}
+section h1{
+    font-size: 45px;
+    color: rgb(39, 204, 245);
+    text-align: center;
+    max-width: 1500px;
+}
+section p {
+    font-size: 30px;
+    font-weight: 700;
+    max-width: 100px;
+    margin-left: 10px;
+    color: rgb(39, 204, 245);
+}
+#input{
+    background-color: #0091ff;
+    height: 45px;
+    font-size: 17px;
+    margin-left: 10px;
+    width: 300px;
+    padding: 5px 12px;
+    border: none;
+    border: 2px solid rgb(17, 17, 17);
+    color: #fff;
+}
+#input::placeholder{
+    color:#ffffffff;
+}
+section button{
+    width: 300px;
+    font-size: 18px;
+    height: 45px;
+    margin-left: 10px;
+    margin-top: 20px;
+    border: none;
+    border: 2px solid rgb(17, 17, 17);
+    color: #ffffffff;
+    background-color: #005291;
+    cursor: pointer;
+    transition: .7s all;
+}
+section button:hover{
+    background-color: #0080ff;
+}
+section button:active{
+    background-color: #1b9bff;
+}
+section textarea{
+    margin-left: 10px;
+    backdrop-filter: blur(3px);
+    background: none;
+    font-size: 50px;
+    color: #fff;
+    padding: 30px 30px;
+}
+
+@media screen and (max-width:980px) {
+    section h1{
+        color: red;
+        line-height: 45px;
+    }
+    section p{
+        color: red;
+    }
+    section textarea{
+        max-width: 600px;
+    }
+}
+@media screen and (max-width:650px) {
+    section textarea{
+        width: 400px;
+        height: 250px;
+    }
+}
+@media screen and (max-width:600px) {
+    section textarea {
+        width: 400px;
+        height: 250px;
+    }
+}
+@media screen and (max-width:400px) {
+    body{
+        width: 100%;
+        height: 100%;
+    }
+    section h1{
+        color: #1b9bff;
+    }
+    section textarea {
+        width: 350px;
+        height: 200px;
+    }
+}
